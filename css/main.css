@@ -96,7 +96,96 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+  margin: 0;
+  text-align: center;
+  font-family: AvenirNext;
+  /*font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;*/
+}
 
+.enclosing {
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  width: 100%
+  padding-top: 10%;
+  background-image: url("/img/background-head.png");
+  background-size: 100%;
+  min-height: 100vh;
+  color: white;
+}
+
+.box {
+  min-height: 10vh;
+  border: 1px solid black;
+}
+
+.app-about, .app-event, .app-team {
+  /*width: 100%;*/
+  height: 900px;
+  background-color: #000067;
+}
+
+.app-title {
+  padding-top: 9%;
+  width: 350px;
+  height: 350px;
+  font-size: 62px;
+  font-weight: bold;
+  color: white;
+}
+
+.about-title {
+  background-color: #faff00;
+}
+
+.event-title {
+  background-color: #ff0053;
+}
+
+.team-title {
+  background-color: #7c00ff;
+}
+
+.about-content {
+  padding: 140px;
+  width: 1090px;
+  height: 550px;
+  font-size: 32px;
+  text-align: left;
+  color: #535353;
+  background-color: #ffffff;
+}
+
+.app-message {
+  background-color: #9bffc6;
+}
+
+.app-sponsor {
+  background-color: #00d8ce;
+}
+
+.message-content {
+  padding: 50px;
+  font-size: 42px;
+  color: white;
+  text-align: left;
+}
+
+.message-content > p {
+  color: #535353;
+  text-align: right;
+}
+
+.message-image {
+  width: 100%;
+  height: 100%;
+}
 
 
 
