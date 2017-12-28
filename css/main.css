@@ -1,10 +1,12 @@
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -15,6 +17,7 @@ html {
     font-size: 1em;
     line-height: 1.4;
 }
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -36,6 +39,7 @@ html {
     text-shadow: none;
 }
 
+
 /*
  * A better looking default horizontal rule
  */
@@ -48,6 +52,7 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
+
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -64,6 +69,7 @@ video {
     vertical-align: middle;
 }
 
+
 /*
  * Remove default fieldset styles.
  */
@@ -74,6 +80,7 @@ fieldset {
     padding: 0;
 }
 
+
 /*
  * Allow only vertical resizing of textareas.
  */
@@ -81,6 +88,7 @@ fieldset {
 textarea {
     resize: vertical;
 }
+
 
 /* ==========================================================================
    Browser Upgrade Prompt
@@ -93,118 +101,105 @@ textarea {
     padding: 0.2em 0;
 }
 
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body {
-  margin: 0;
-  text-align: center;
-  font-family: AvenirNext;
-  /*font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.enclosing {
-  display: flex;
-  flex-direction: column;
+body {
+    background-color: #000067;
+    font-family: Avenir Next;
+    text-align: center;
 }
 
 .app {
-  width: 100%
-  padding-top: 10%;
-  background-image: url("/img/background-head.png");
-  background-size: 100%;
-  min-height: 100vh;
-  color: white;
+    background: url(../img/app-bg.jpg) center center no-repeat;
+    color: white;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
 }
 
-.box {
-  min-height: 10vh;
-  border: 1px solid black;
+.app::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(17, 36, 255, 0.84);
 }
 
-.app-about, .app-event, .app-team {
-  /*width: 100%;*/
-  height: 900px;
-  background-color: #000067;
+.app-about {
+    height: 100vh;   
 }
 
-.app-title {
-  padding-top: 9%;
-  width: 350px;
-  height: 350px;
-  font-size: 62px;
-  font-weight: bold;
-  color: white;
+.app-about__title {
+    align-items: center;
+    background-color: #faff00;
+    display: flex;
+    height: 25%;
+    justify-content: center;
+    padding-top: 10%;
 }
 
-.about-title {
-  background-color: #faff00;
+.app-about__title  h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
 }
 
-.event-title {
-  background-color: #ff0053;
+.app-about__content {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 75%;
+    padding: 0 10%;
 }
 
-.team-title {
-  background-color: #7c00ff;
-}
-
-.about-content {
-  padding: 140px;
-  width: 1090px;
-  height: 550px;
-  font-size: 32px;
-  text-align: left;
-  color: #535353;
-  background-color: #ffffff;
+.app-about__content p {
+    color: #535353;
+    font-size: 1.35rem;
 }
 
 .app-message {
-  background-color: #9bffc6;
+    background-color: #9bffc6;
+    height: 60vh;
 }
 
 .app-sponsor {
-  background-color: #00d8ce;
+    background-color: #00d8ce;
 }
 
 .message-content {
-  padding: 50px;
-  font-size: 42px;
-  color: white;
-  text-align: left;
+    padding: 50px;
+    font-size: 42px;
+    color: white;
+    text-align: left;
 }
 
-.message-content > p {
-  color: #535353;
-  text-align: right;
+.message-content>p {
+    color: #535353;
+    text-align: right;
 }
 
 .message-image {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
 
 /*
  * Hide visually and from screen readers
@@ -213,6 +208,7 @@ body {
 .hidden {
     display: none !important;
 }
+
 
 /*
  * Hide only visually, but have it available for screen readers:
@@ -234,8 +230,10 @@ body {
     padding: 0;
     position: absolute;
     width: 1px;
-    white-space: nowrap; /* 1 */
+    white-space: nowrap;
+    /* 1 */
 }
+
 
 /*
  * Extends the .visuallyhidden class to allow the element
@@ -256,13 +254,16 @@ body {
     white-space: inherit;
 }
 
+
 /*
  * Hide visually and from screen readers, but maintain layout
  */
 
 .invisible {
+    min-height: 0;
     visibility: hidden;
 }
+
 
 /*
  * Clearfix: contain floats
@@ -278,13 +279,16 @@ body {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
     clear: both;
 }
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -294,14 +298,33 @@ body {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+    .app-about__title {
+        height: 40%;
+        padding-top: 0;
+    }
+    
+    .app-about__title  h1 {
+        font-size: 3rem;
+    }
+    
+    .app-about__content {
+        text-align: left;
+        height: 60%;
+        padding: 0 12%;
+    }
+
+    .app-about__content p {
+        font-size: 1.65rem;
+    }    
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
+
 
 /* ==========================================================================
    Print styles.
@@ -314,35 +337,30 @@ body {
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
     a,
     a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
     }
-
     pre {
         white-space: pre-wrap !important;
     }
@@ -351,28 +369,23 @@ body {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
     thead {
         display: table-header-group;
     }
-
     tr,
     img {
         page-break-inside: avoid;
     }
-
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
-
     h2,
     h3 {
         page-break-after: avoid;
