@@ -146,14 +146,15 @@ body {
     align-items: center;
     background-color: #faff00;
     display: flex;
-    height: 25%;
+    height: 30%;
     justify-content: center;
-    padding-top: 10%;
 }
 
 .app-about__title  h1 {
     color: #ffffff;
     font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 25%;
 }
 
 .app-about__content {
@@ -162,13 +163,14 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 75%;
+    height: 70%;
     padding: 0 10%;
 }
 
 .app-about__content p {
     color: #535353;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
+    margin: 0;
 }
 
 .app-message {
@@ -177,13 +179,15 @@ body {
 }
 
 .app-message__content {
-    padding: 10% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5% 5%;
 }
 
 .app-message__content .message__content--msg {
     color: #ffffff;
-    font-size: 1.35rem;
-    height: 95%;
+    font-size: 1.3rem;
     position: relative;
     text-align: left;
     z-index: 1;
@@ -236,6 +240,19 @@ body {
     position: relative;
 }
 
+/* .app-event__title {
+    align-items: center;
+    background-color: #ff0053;
+    display: flex;
+    height: 30%;
+    justify-content: center;
+}
+
+.app-event__title h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+} */
+
 /*.app-sponsor {
     background-color: #00d8ce;
 }
@@ -257,6 +274,7 @@ body {
     height: 100%;
 } */
 
+.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table !important}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table !important}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table !important}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table !important}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table !important}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}
 
 /* ==========================================================================
    Helper classes
@@ -358,7 +376,7 @@ body {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media (min-width: 1200px) {
     /* Style adjustments for viewports that meet the condition */
     .app-about__title {
         height: 40%;
@@ -367,6 +385,7 @@ body {
     
     .app-about__title  h1 {
         font-size: 3rem;
+        margin: 0;
     }
     
     .app-about__content {
@@ -380,15 +399,15 @@ body {
     }    
     
     .app-message__content {
-        padding: 15% 5%;
+        padding: 5% 5%;
     }
     
     .app-message__content .message__content--msg {
-        font-size: 2.25rem;
+        font-size: 1.75rem;
     }
     
     .octicon {
-        top: -15px;
+        top: -5px;
         left: -15px;
     }
     
