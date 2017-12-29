@@ -298,14 +298,14 @@ body {
 /* === Team section === */
 
 .app-team {
-    height: 100vh;
+    height: auto;
 }
 
 .app-team__title {
     align-items: center;
     background-color:#7c00ff;    
     display: flex;
-    height: 20%;
+    height: 20vh;
     justify-content: center;
 }
 
@@ -331,11 +331,56 @@ body {
     height: auto;
 }
 
-/*.app-sponsor {
+.app-sponsor {
+    height: auto;
     background-color: #00d8ce;
 }
 
-.message-content {
+.app-sponsor__content {
+    /* padding: 5% 0; */
+}
+
+.app-sponsor__content h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-sponsor__content ul {
+    list-style: none;
+    padding: 0;
+    /* height: 60%; */
+}
+
+.app-sponsor__content ul > li {
+    margin-bottom: 7%;
+}
+
+.app-sponsor__content button {
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 5% auto;
+    margin-bottom: 7%;
+    padding: 5% 10%;
+    border-radius: 100px;
+    background-color: #00eee3;
+}
+
+.app-sponsor__image {
+    background: url(../img/ty-bg.png) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* .message-content {
     padding: 50px;
     font-size: 42px;
     color: white;
@@ -514,9 +559,17 @@ body {
     .app-event__tile {
         height: 60%;
     }
+
+    .app-event__tile .event__tile {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
     
     .app-team__title {
-        height: 40%;
+        height: 40vh;
     }
 
     .app-team__title h1 {
@@ -532,6 +585,40 @@ body {
         cursor: pointer;
         height: auto;
         width: 20%;
+    }
+
+    .app-sponsor {
+        height: 100vh;
+    }
+    
+    .app-sponsor__content {
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .app-sponsor__content h1 {
+        font-size: 3rem;
+        height: auto;
+        display: block;
+        text-align: left;
+    }
+    
+    .app-sponsor__content ul {
+        margin-top: 0;
+    }
+    
+    .app-sponsor__content ul > li {
+        float: left;
+        margin: 2% 2%;
+    } 
+
+    .app-sponsor__content button {
+        max-width: 250px;
+        display: inline-block;
+        margin: 0;
+        padding: 2% 0%;
     }
 }
 
