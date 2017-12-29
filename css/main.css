@@ -130,6 +130,8 @@ body {
     content: "";
     position: absolute;
     top: 0;
+    height: 100%;
+    width: 100%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -174,7 +176,67 @@ body {
     height: 60vh;
 }
 
-.app-sponsor {
+.app-message__content {
+    padding: 10% 5%;
+}
+
+.app-message__content .message__content--msg {
+    color: #ffffff;
+    font-size: 1.35rem;
+    height: 95%;
+    position: relative;
+    text-align: left;
+    z-index: 1;
+}
+
+.octicon {
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    z-index: -1;
+}
+
+.app-message__content .message__content--auth {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.message__content--auth ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.message__content--auth ul > li {
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+}
+
+.message__content--auth ul > li:nth-child(1) {
+    margin-right: 10px;
+}
+
+.message__content--auth ul > li.active{
+    background: #ffffff;
+}
+
+.message__content--auth p {
+    color: #535353;
+    font-size: 1.45rem;
+}
+
+.app-message__image {
+    background: url(../img/msg-bg.png) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/*.app-sponsor {
     background-color: #00d8ce;
 }
 
@@ -193,7 +255,7 @@ body {
 .message-image {
     width: 100%;
     height: 100%;
-}
+} */
 
 
 /* ==========================================================================
@@ -316,6 +378,32 @@ body {
     .app-about__content p {
         font-size: 1.65rem;
     }    
+    
+    .app-message__content {
+        padding: 15% 5%;
+    }
+    
+    .app-message__content .message__content--msg {
+        font-size: 2.25rem;
+    }
+    
+    .octicon {
+        top: -15px;
+        left: -15px;
+    }
+    
+    .app-message__content .message__content--auth {
+        padding: 0 3%;
+    }
+    
+    .message__content--auth ul > li:nth-child(1) {
+        margin-right: 20px;
+    }
+    
+    .message__content--auth p {
+        color: #535353;
+        font-size: 2rem;
+    }
 }
 
 @media print,
