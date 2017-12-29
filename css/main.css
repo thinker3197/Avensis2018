@@ -138,6 +138,8 @@ body {
     background-color: rgba(17, 36, 255, 0.84);
 }
 
+/* === About section === */
+
 .app-about {
     height: 100vh;   
 }
@@ -172,6 +174,8 @@ body {
     font-size: 1.3rem;
     margin: 0;
 }
+
+/* === Message section === */
 
 .app-message {
     background-color: #9bffc6;
@@ -240,18 +244,92 @@ body {
     position: relative;
 }
 
-/* .app-event__title {
+/* === Event section === */
+
+.app-event {
+    height: 100vh;
+}
+
+.app-event__title {
     align-items: center;
     background-color: #ff0053;
     display: flex;
-    height: 30%;
+    height: 20%;
     justify-content: center;
 }
 
 .app-event__title h1 {
     color: #ffffff;
     font-size: 2.5rem;
-} */
+    font-weight: bold;
+}
+
+.app-event__tile {
+    background: #ffffff;
+    height: 80%;
+    padding: 0;
+    cursor: pointer;
+}
+
+.app-event__tile .event__tile {
+    height: 50%;
+    background: #ffffff;
+    width: 50%;
+    float: left;
+    padding: 10% 5%;
+}
+
+.app-event__tile .event__tile:nth-of-type(1) {
+    background: #d4d4d4;
+}
+
+.app-event__tile .event__tile:nth-of-type(4) {
+    background: #d4d4d4;
+}
+
+.app-event__tile .event__tile > h2 {
+    margin-bottom: 15px;
+}
+
+.app-event__tile .event__tile > p {
+    color:#999999;
+}
+
+/* === Team section === */
+
+.app-team {
+    height: 100vh;
+}
+
+.app-team__title {
+    align-items: center;
+    background-color:#7c00ff;    
+    display: flex;
+    height: 20%;
+    justify-content: center;
+}
+
+.app-team__title h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.app-team__content {
+    padding: 0;
+}
+
+.app-team__content .team__content--tile {
+    height: 33.33vw;
+    width: 33.33vw;
+    float: left;
+    overflow: hidden;
+}
+
+.app-team__content .team__content--tile > img {
+    width: 100%;
+    height: auto;
+}
 
 /*.app-sponsor {
     background-color: #00d8ce;
@@ -422,6 +500,38 @@ body {
     .message__content--auth p {
         color: #535353;
         font-size: 2rem;
+    }
+    
+    .app-event__title {
+        height: 40%;
+    }
+    
+    .app-event__title h1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+    
+    .app-event__tile {
+        height: 60%;
+    }
+    
+    .app-team__title {
+        height: 40%;
+    }
+
+    .app-team__title h1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+    
+    .app-team__content {
+        height: auto;
+    }
+    
+    .app-team__content .team__content--tile {
+        cursor: pointer;
+        height: auto;
+        width: 20%;
     }
 }
 
