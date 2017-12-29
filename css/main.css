@@ -138,10 +138,124 @@ body {
     background-color: rgba(17, 36, 255, 0.84);
 }
 
+.app__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 3%;
+    z-index: 1;
+    height: 10%;
+    padding: 0 3%;
+}
+
+.app__nav--menu {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: #ff00f9;
+    justify-content: center;
+}
+
+.app__nav--logo img {
+    width: 75%;
+    height: auto;
+}
+
+.app__nav--menu {
+    cursor: pointer;
+}
+
+.app__scene {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    transform: rotate(-4deg);
+}
+
+.app__scene .app__scene--left > li:nth-child(2) {
+    margin-left: -30%;
+}
+
+.app__scene .app__scene--right > li:nth-child(1) {
+    margin-left: 30%;
+}
+
+.app__scene ul {
+    list-style: none;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.app__content {
+    position: relative;
+    margin: 0 auto;
+    z-index: 5;
+    height: 100%;
+    padding: 10% 0px;
+}
+
+.app__content h1 {
+    font-size: 52px;
+    font-weight: bold;
+    text-shadow: 6px 6px #000000;
+}
+
+.app__content p {
+    font-size: 20px;
+    margin: 5% 0;
+}
+
+.app__content h2 {
+    margin: 20% 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.app__content button {
+    border: none;
+    background: #00cbff;
+    cursor: pointer;
+    color: #ffffff;
+    margin-top: 15%;
+    padding: 5% 15%;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.app__timer {
+    position: absolute;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -50px;
+    width: 90%;
+    height: 100px;
+    left: 5%;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px 0 rgba(141, 141, 141, 0.5);
+    z-index: 10;
+}
+
+.app__timer p {
+    color:#535353;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
 /* === About section === */
 
 .app-about {
-    height: 100vh;   
+    height: 100vh; 
+    position: relative;
+    z-index: 9;  
 }
 
 .app-about__title {
@@ -529,6 +643,75 @@ body {
 
 @media (min-width: 1200px) {
     /* Style adjustments for viewports that meet the condition */
+    .app__scene {
+        display: flex;
+        position: absolute;
+        width: 60%;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 0;
+        left: 15%;
+        z-index: 6;
+        transform: rotate(-4deg);
+    }
+    
+    .app__scene .app__scene--left > li:nth-child(2) {
+        margin-left: 50%;
+    }
+    
+    .app__scene .app__scene--right > li:nth-child(1) {
+        margin-left: 50%;
+    }
+
+    .app__scene .app__scene--right > li:nth-child(3) {
+        margin-left: 100%;
+    }
+    
+    .app__scene ul {
+        height: 75vh;
+    }
+    
+    .app__content {
+        padding: 5% 0px;
+    }
+    
+    .app__content h1 {
+        font-size: 5rem;
+        font-weight: bold;
+        text-shadow: 6px 6px #000000;
+    }
+    
+    .app__content p {
+        font-size: 1.5rem;
+    }
+    
+    .app__content h2 {
+        margin: 15% 0;
+        font-size: 2rem;
+    }
+    
+    .app__content button {
+        margin-top: 5%;
+        padding: 3.5% 15%;
+    }
+    
+    .app__timer {
+        position: absolute;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: -50px;
+        width: 50%;
+        height: 100px;
+        left: 25%;
+        box-shadow: 0 6px 10px 0 rgba(141, 141, 141, 0.5);
+    }
+    
+    .app__timer p {
+        font-size: 2rem;
+    }
+
     .app-about__title {
         height: 40%;
         padding-top: 0;
