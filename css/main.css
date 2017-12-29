@@ -230,6 +230,10 @@ body {
     font-size: 20px;
 }
 
+/* ==========================================================================
+    About section
+   ========================================================================== */
+
 .app__timer {
     position: absolute;
     background: #ffffff;
@@ -250,8 +254,6 @@ body {
     margin: 0;
     font-size: 1.2rem;
 }
-
-/* === About section === */
 
 .app-about {
     height: 100vh; 
@@ -290,7 +292,9 @@ body {
     margin: 0;
 }
 
-/* === Message section === */
+/* ==========================================================================
+    Message section
+   ========================================================================== */
 
 .app-message {
     background-color: #9bffc6;
@@ -301,7 +305,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 5% 5%;
+    padding: 7% 5%;
 }
 
 .app-message__content .message__content--msg {
@@ -330,6 +334,7 @@ body {
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .message__content--auth ul > li {
@@ -351,6 +356,7 @@ body {
 .message__content--auth p {
     color: #535353;
     font-size: 1.45rem;
+    margin: 0;
 }
 
 .app-message__image {
@@ -359,7 +365,9 @@ body {
     position: relative;
 }
 
-/* === Event section === */
+/* ==========================================================================
+    Event section
+   ========================================================================== */
 
 .app-event {
     height: 100vh;
@@ -410,7 +418,9 @@ body {
     color:#999999;
 }
 
-/* === Team section === */
+/* ==========================================================================
+    Team section
+   ========================================================================== */
 
 .app-team {
     height: auto;
@@ -445,6 +455,10 @@ body {
     width: 100%;
     height: auto;
 }
+
+/* ==========================================================================
+    Sponsor section
+   ========================================================================== */
 
 .app-sponsor {
     height: auto;
@@ -486,7 +500,9 @@ body {
     position: relative;
 }
 
-/* === Footer section === */
+/* ==========================================================================
+    Footer
+   ========================================================================== */
 
 .footer {
     height: 10vh;
@@ -535,6 +551,10 @@ body {
 .hidden {
     display: none !important;
 }
+
+/* 
+ * Hide element for mobile devices
+ */
 
 @media (max-width:767px){
     .hidden-xs{display:none !important}
@@ -656,14 +676,197 @@ body {
         margin-right: -150%;
     }
 
+    .app__scene ul {
+        height: 75vh;
+    }
+    
+    .app__content {
+        padding: 5% 0px;
+    }
+
+    .app__content h1 {
+        font-size: 4rem;
+    }
+
+    .app__content p {
+        font-size: 1.3rem;
+    }
+
+    .app__content h2 {
+        margin: 12% 0;
+        font-size: 1.6rem;
+    }
+
+    .app__content button {
+        margin-top: 5%;
+        padding: 3.5% 15%;
+    }
+
+/* ==========================================================================
+    About section
+   ========================================================================== */
+
     .app__timer {
         width: 50%;
         left: 25%;
     }
+
+    .app__timer p {
+        font-size: 1.6rem;
+    }
+
+    .app-about__title {
+        height: 30%;
+        padding-top: 0;
+    }
+    
+    .app-about__title  h1 {
+        font-size: 2.8rem;
+        margin: 0;
+    }
+    
+    .app-about__content {
+        text-align: left;
+        height: 70%;
+        padding: 0 12%;
+    }
+
+    .app-about__content p {
+        font-size: 1.40rem;
+    }  
+
+/* ==========================================================================
+    Message section
+   ========================================================================== */
+    
+    .app-message__content {
+        padding: 5vw 5%;
+    }
+    
+    .app-message__content .message__content--msg {
+        font-size: 1.5rem;
+    }
+    
+    .octicon {
+        top: -5px;
+        left: -15px;
+    }
+    
+    .app-message__content .message__content--auth {
+        padding: 0 3%;
+    }
+    
+    .message__content--auth ul > li:nth-child(1) {
+        margin-right: 20px;
+    }
+    
+    .message__content--auth p {
+        color: #535353;
+        font-size: 1.8rem;
+    }
+
+/* ==========================================================================
+    Event section
+   ========================================================================== */
+    
+    .app-event__title {
+        height: 30%;
+    }
+    
+    .app-event__title h1 {
+        font-size: 2.8rem;
+        margin: 0;
+    }
+    
+    .app-event__tile {
+        height: 70%;
+    }
+
+    .app-event__tile .event__tile {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+/* ==========================================================================
+    Team section
+   ========================================================================== */
+    
+    .app-team__title {
+        height: 30vh;
+    }
+
+    .app-team__title h1 {
+        font-size: 2.8rem;
+        margin: 0;
+    }
+    
+    .app-team__content {
+        height: auto;
+    }
+    
+    .app-team__content .team__content--tile {
+        cursor: pointer;
+        height: auto;
+        width: 20%;
+    }
+
+/* ==========================================================================
+    Sponsor section
+   ========================================================================== */
+
+    .app-sponsor {
+        height: 100vh;
+    }
+    
+    .app-sponsor__content {
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .app-sponsor__content h1 {
+        font-size: 2.8rem;
+        height: auto;
+        display: block;
+        text-align: left;
+    }
+    
+    .app-sponsor__content ul {
+        margin-top: 0;
+    }
+    
+    .app-sponsor__content ul > li {
+        float: left;
+        margin: 2% 2%;
+    } 
+
+    .app-sponsor__content button {
+        max-width: 250px;
+        display: inline-block;
+        margin: 0;
+        padding: 2.5vh 0%;
+    }
+
+/* ==========================================================================
+    Footer
+   ========================================================================== */
+
+   .footer ul {
+        width: 15%;
+    }
+
+    .footer ul > li {
+        height: 25px;
+        width: 25px;
+        cursor: pointer;
+    }
 }
 
 @media (min-width: 1200px) {
-    /* Style adjustments for viewports that meet the condition */
     .app__scene .app__scene--left > li:nth-child(1) {
         margin-left: -150%;
     }
@@ -684,18 +887,8 @@ body {
         margin-right: -200%;
     }
     
-    .app__scene ul {
-        height: 75vh;
-    }
-    
-    .app__content {
-        padding: 5% 0px;
-    }
-    
     .app__content h1 {
         font-size: 5rem;
-        font-weight: bold;
-        text-shadow: 6px 6px #000000;
     }
     
     .app__content p {
@@ -706,11 +899,10 @@ body {
         margin: 15% 0;
         font-size: 2rem;
     }
-    
-    .app__content button {
-        margin-top: 5%;
-        padding: 3.5% 15%;
-    }
+
+/* ==========================================================================
+    About section
+   ========================================================================== */
     
     .app__timer {
         width: 40%;
@@ -723,49 +915,35 @@ body {
 
     .app-about__title {
         height: 40%;
-        padding-top: 0;
     }
     
     .app-about__title  h1 {
         font-size: 3rem;
-        margin: 0;
     }
     
     .app-about__content {
-        text-align: left;
         height: 60%;
-        padding: 0 12%;
     }
 
     .app-about__content p {
         font-size: 1.65rem;
     }    
-    
-    .app-message__content {
-        padding: 5% 5%;
-    }
+
+/* ==========================================================================
+    Message section
+   ========================================================================== */
     
     .app-message__content .message__content--msg {
         font-size: 1.75rem;
     }
     
-    .octicon {
-        top: -5px;
-        left: -15px;
-    }
-    
-    .app-message__content .message__content--auth {
-        padding: 0 3%;
-    }
-    
-    .message__content--auth ul > li:nth-child(1) {
-        margin-right: 20px;
-    }
-    
     .message__content--auth p {
-        color: #535353;
         font-size: 2rem;
     }
+
+/* ==========================================================================
+    Event section
+   ========================================================================== */
     
     .app-event__title {
         height: 40%;
@@ -773,20 +951,15 @@ body {
     
     .app-event__title h1 {
         font-size: 3rem;
-        margin: 0;
     }
     
     .app-event__tile {
         height: 60%;
     }
 
-    .app-event__tile .event__tile {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0;
-    }
+/* ==========================================================================
+    Team section
+   ========================================================================== */
     
     .app-team__title {
         height: 40vh;
@@ -794,61 +967,26 @@ body {
 
     .app-team__title h1 {
         font-size: 3rem;
-        margin: 0;
-    }
-    
-    .app-team__content {
-        height: auto;
-    }
-    
-    .app-team__content .team__content--tile {
-        cursor: pointer;
-        height: auto;
-        width: 20%;
     }
 
-    .app-sponsor {
-        height: 100vh;
-    }
+/* ==========================================================================
+    Sponsor section
+   ========================================================================== */
     
     .app-sponsor__content {
         padding: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
     }
     
     .app-sponsor__content h1 {
         font-size: 3rem;
-        height: auto;
-        display: block;
-        text-align: left;
     }
-    
-    .app-sponsor__content ul {
-        margin-top: 0;
-    }
-    
-    .app-sponsor__content ul > li {
-        float: left;
-        margin: 2% 2%;
-    } 
 
-    .app-sponsor__content button {
-        max-width: 250px;
-        display: inline-block;
-        margin: 0;
-        padding: 2% 0%;
-    }
+/* ==========================================================================
+    Footer
+   ========================================================================== */
 
     .footer ul {
-        width: 15%;
-    }
-    
-    .footer ul > li {
-        height: 30px;
-        width: 30px;
-        cursor: pointer;
+        width: 13%;
     }
 }
 
