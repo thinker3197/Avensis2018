@@ -106,6 +106,26 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -117,7 +137,7 @@ body {
     font-family: Avenir Next;
     text-align: center;
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .app {
@@ -162,7 +182,7 @@ body {
     overflow: hidden;
 }
 
-.app__nav--menu > div {
+.app__nav--menu>div {
     width: 20px;
     height: 2px;
     background: #ffffff;
@@ -175,27 +195,26 @@ body {
     transform-origin: left center;
 }
 
-.app__nav--menu > div:nth-child(2) {
+.app__nav--menu>div:nth-child(2) {
     width: 15px;
 }
 
-.app__nav--menu:hover > div:nth-child(2) {
+.app__nav--menu:hover>div:nth-child(2) {
     width: 20px;
 }
 
-.app__nav--menu.open > div:nth-child(1) {
-    transform:  rotate(45deg) translateY(-3px);
+.app__nav--menu.open>div:nth-child(1) {
+    transform: rotate(45deg) translateY(-3px);
     height: 3px;
     width: 22px;
 }
 
-.app__nav--menu.open > div:nth-child(2) {
+.app__nav--menu.open>div:nth-child(2) {
     opacity: 0;
 }
 
-
-.app__nav--menu.open > div:nth-child(3) {
-    transform:  rotate(-45deg) translateY(3px);
+.app__nav--menu.open>div:nth-child(3) {
+    transform: rotate(-45deg) translateY(3px);
     height: 3px;
     width: 22px;
 }
@@ -217,11 +236,11 @@ body {
     transform: rotate(-4deg);
 }
 
-.app__scene .app__scene--left > li:nth-child(2) {
+.app__scene .app__scene--left>li:nth-child(2) {
     margin-left: -30%;
 }
 
-.app__scene .app__scene--right > li:nth-child(1) {
+.app__scene .app__scene--right>li:nth-child(1) {
     margin-left: 30%;
 }
 
@@ -267,6 +286,14 @@ body {
     padding: 5% 15%;
     border-radius: 50px;
     font-size: 20px;
+    position: relative;
+    transition: all 0.25s;
+}
+
+.app__content button:hover {
+    background: #00bae9;
+    box-shadow: 0 2px 4px rgba(0, 0, 50, 0.5);
+    transform: translate(-3px, -3px);
 }
 
 /* ==========================================================================
@@ -299,8 +326,9 @@ body {
     font-size: 2rem;
     margin: 10% 0;
     cursor: pointer;
-    font-weight: 500;  
+    font-weight: 500;
 }
+
 
 /* ==========================================================================
     About section
@@ -322,15 +350,15 @@ body {
 }
 
 .app__timer p {
-    color:#535353;
+    color: #535353;
     margin: 0;
     font-size: 1.2rem;
 }
 
 .app-about {
-    height: 100vh; 
+    height: 100vh;
     position: relative;
-    z-index: 9;  
+    z-index: 9;
 }
 
 .app-about__title {
@@ -341,7 +369,7 @@ body {
     justify-content: center;
 }
 
-.app-about__title  h1 {
+.app-about__title h1 {
     color: #ffffff;
     font-size: 2.5rem;
     font-weight: bold;
@@ -363,6 +391,7 @@ body {
     font-size: 1.3rem;
     margin: 0;
 }
+
 
 /* ==========================================================================
     Message section
@@ -409,7 +438,7 @@ body {
     margin: 0;
 }
 
-.message__content--auth ul > li {
+.message__content--auth ul>li {
     border-radius: 50%;
     border: 4px solid #ffffff;
     cursor: pointer;
@@ -417,11 +446,11 @@ body {
     width: 18px;
 }
 
-.message__content--auth ul > li:nth-child(1) {
+.message__content--auth ul>li:nth-child(1) {
     margin-right: 10px;
 }
 
-.message__content--auth ul > li.active{
+.message__content--auth ul>li.active {
     background: #ffffff;
 }
 
@@ -436,6 +465,7 @@ body {
     background-size: cover;
     position: relative;
 }
+
 
 /* ==========================================================================
     Event section
@@ -482,13 +512,14 @@ body {
     background: #d4d4d4;
 }
 
-.app-event__tile .event__tile > h2 {
+.app-event__tile .event__tile>h2 {
     margin-bottom: 15px;
 }
 
-.app-event__tile .event__tile > p {
-    color:#999999;
+.app-event__tile .event__tile>p {
+    color: #999999;
 }
+
 
 /* ==========================================================================
     Team section
@@ -500,7 +531,7 @@ body {
 
 .app-team__title {
     align-items: center;
-    background-color:#7c00ff;    
+    background-color: #7c00ff;
     display: flex;
     height: 20vh;
     justify-content: center;
@@ -523,10 +554,11 @@ body {
     overflow: hidden;
 }
 
-.app-team__content .team__content--tile > img {
+.app-team__content .team__content--tile>img {
     width: 100%;
     height: auto;
 }
+
 
 /* ==========================================================================
     Sponsor section
@@ -552,7 +584,7 @@ body {
     padding: 0;
 }
 
-.app-sponsor__content ul > li {
+.app-sponsor__content ul>li {
     margin-bottom: 7%;
 }
 
@@ -571,6 +603,7 @@ body {
     background-size: cover;
     position: relative;
 }
+
 
 /* ==========================================================================
     Footer
@@ -600,16 +633,17 @@ body {
     padding: 0;
 }
 
-.footer ul > li {
+.footer ul>li {
     height: 25px;
     width: 25px;
     overflow: hidden;
 }
 
-.footer ul > li img {
+.footer ul>li img {
     width: 100%;
     height: auto;
 }
+
 
 /* ==========================================================================
    Helper classes
@@ -624,20 +658,26 @@ body {
     display: none !important;
 }
 
+
 /* 
  * Disable scroll on element
  */
+
 .no-scroll {
     overflow: hidden;
 }
+
 
 /* 
  * Hide element for mobile devices
  */
 
-@media (max-width:767px){
-    .hidden-xs{display:none !important}
+@media (max-width:767px) {
+    .hidden-xs {
+        display: none !important
+    }
 }
+
 
 /*
  * Hide only visually, but have it available for screen readers:
@@ -726,151 +766,118 @@ body {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-device-width : 768px) {
+@media only screen and (min-device-width: 768px) {
     .app__scene {
         width: 60%;
         left: 20%;
     }
-
     .app__content {
         padding: 5% 0;
     }
-    
-    .app__scene .app__scene--left > li:nth-child(1) {
+    .app__scene .app__scene--left>li:nth-child(1) {
         margin-left: -100%;
     }
-    
-    .app__scene .app__scene--left > li:nth-child(2) {
+    .app__scene .app__scene--left>li:nth-child(2) {
         margin-left: 0%;
     }
-
-    .app__scene .app__scene--left > li:nth-child(3) {
+    .app__scene .app__scene--left>li:nth-child(3) {
         margin-left: -100%;
     }
-    
-    .app__scene .app__scene--right > li:nth-child(1) {
+    .app__scene .app__scene--right>li:nth-child(1) {
         margin-right: -100%;
     }
-
-    .app__scene .app__scene--right > li:nth-child(3) {
+    .app__scene .app__scene--right>li:nth-child(3) {
         margin-right: -150%;
     }
-
     .app__scene ul {
         height: 75vh;
     }
-    
     .app__content {
         padding: 5% 0px;
     }
-
     .app__content h1 {
         font-size: 4rem;
     }
-
     .app__content p {
         font-size: 1.3rem;
     }
-
     .app__content h2 {
         margin: 12% 0;
         font-size: 1.6rem;
     }
-
     .app__content button {
         margin-top: 5%;
         padding: 3.5% 15%;
     }
-    
     .app-nav-wrapper__content li {
         font-size: 2.5rem;
-        margin: 12% 0; 
+        margin: 12% 0;
     }
-    
     .app-nav-wrapper__content li:hover {
         text-decoration: line-through;
     }
-
-/* ==========================================================================
+    /* ==========================================================================
     About section
    ========================================================================== */
-
     .app__timer {
         width: 50%;
         left: 25%;
     }
-
     .app__timer p {
         font-size: 1.6rem;
     }
-
     .app-about__title {
         height: 30%;
         padding-top: 0;
     }
-    
-    .app-about__title  h1 {
+    .app-about__title h1 {
         font-size: 2.8rem;
         margin: 0;
     }
-    
     .app-about__content {
         text-align: left;
         height: 70%;
         padding: 0 12%;
     }
-
     .app-about__content p {
         font-size: 1.40rem;
-    }  
-
-/* ==========================================================================
+    }
+    /* ==========================================================================
     Message section
    ========================================================================== */
-    
     .app-message__content {
         padding: 5vw 5%;
     }
-    
     .app-message__content .message__content--msg {
         font-size: 1.5rem;
     }
-    
     .octicon {
         top: -5px;
         left: -15px;
     }
-    
     .app-message__content .message__content--auth {
         padding: 0 3%;
     }
-    
-    .message__content--auth ul > li:nth-child(1) {
+    .message__content--auth ul>li:nth-child(1) {
         margin-right: 20px;
     }
-    
     .message__content--auth p {
         color: #535353;
         font-size: 1.8rem;
     }
-
-/* ==========================================================================
+    /* ==========================================================================
     Event section
    ========================================================================== */
-    
     .app-event__title {
         height: 30%;
     }
-    
     .app-event__title h1 {
         font-size: 2.8rem;
         margin: 0;
     }
-    
     .app-event__tile {
         height: 70%;
     }
-
     .app-event__tile .event__tile {
         align-items: center;
         display: flex;
@@ -878,77 +885,62 @@ body {
         justify-content: center;
         padding: 0;
     }
-
-/* ==========================================================================
+    /* ==========================================================================
     Team section
    ========================================================================== */
-    
     .app-team__title {
         height: 30vh;
     }
-
     .app-team__title h1 {
         font-size: 2.8rem;
         margin: 0;
     }
-    
     .app-team__content {
         height: auto;
     }
-    
     .app-team__content .team__content--tile {
         cursor: pointer;
         height: auto;
         width: 20%;
     }
-
-/* ==========================================================================
+    /* ==========================================================================
     Sponsor section
    ========================================================================== */
-
     .app-sponsor {
         height: 100vh;
     }
-    
     .app-sponsor__content {
         padding: 3%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
-    
     .app-sponsor__content h1 {
         font-size: 2.8rem;
         height: auto;
         display: block;
         text-align: left;
     }
-    
     .app-sponsor__content ul {
         margin-top: 0;
     }
-    
-    .app-sponsor__content ul > li {
+    .app-sponsor__content ul>li {
         float: left;
         margin: 2% 2%;
-    } 
-
+    }
     .app-sponsor__content button {
         max-width: 250px;
         display: inline-block;
         margin: 0;
         padding: 2.5vh 0%;
     }
-
-/* ==========================================================================
+    /* ==========================================================================
     Footer
    ========================================================================== */
-
-   .footer ul {
+    .footer ul {
         width: 15%;
     }
-
-    .footer ul > li {
+    .footer ul>li {
         height: 25px;
         width: 25px;
         cursor: pointer;
@@ -956,124 +948,95 @@ body {
 }
 
 @media (min-width: 1200px) {
-    .app__scene .app__scene--left > li:nth-child(1) {
+    .app__scene .app__scene--left>li:nth-child(1) {
         margin-left: -150%;
     }
-    
-    .app__scene .app__scene--left > li:nth-child(2) {
+    .app__scene .app__scene--left>li:nth-child(2) {
         margin-left: 50%;
     }
-
-    .app__scene .app__scene--left > li:nth-child(3) {
+    .app__scene .app__scene--left>li:nth-child(3) {
         margin-left: -150%;
     }
-    
-    .app__scene .app__scene--right > li:nth-child(1) {
+    .app__scene .app__scene--right>li:nth-child(1) {
         margin-right: -150%;
     }
-
-    .app__scene .app__scene--right > li:nth-child(3) {
+    .app__scene .app__scene--right>li:nth-child(3) {
         margin-right: -200%;
     }
-    
     .app__content h1 {
         font-size: 5rem;
     }
-    
     .app__content p {
         font-size: 1.5rem;
     }
-    
     .app__content h2 {
         margin: 15% 0;
         font-size: 2rem;
     }
-
-/* ==========================================================================
+    /* ==========================================================================
     About section
    ========================================================================== */
-    
     .app__timer {
         width: 40%;
         left: 30%;
     }
-
     .app__timer p {
         font-size: 2rem;
     }
-
     .app-about__title {
         height: 40%;
     }
-    
-    .app-about__title  h1 {
+    .app-about__title h1 {
         font-size: 3rem;
     }
-    
     .app-about__content {
         height: 60%;
     }
-
     .app-about__content p {
         font-size: 1.65rem;
-    }    
-
-/* ==========================================================================
+    }
+    /* ==========================================================================
     Message section
    ========================================================================== */
-    
     .app-message__content .message__content--msg {
         font-size: 1.75rem;
     }
-    
     .message__content--auth p {
         font-size: 2rem;
     }
-
-/* ==========================================================================
+    /* ==========================================================================
     Event section
    ========================================================================== */
-    
     .app-event__title {
         height: 40%;
     }
-    
     .app-event__title h1 {
         font-size: 3rem;
     }
-    
     .app-event__tile {
         height: 60%;
     }
-
-/* ==========================================================================
+    /* ==========================================================================
     Team section
    ========================================================================== */
-    
     .app-team__title {
         height: 40vh;
     }
-
     .app-team__title h1 {
         font-size: 3rem;
     }
-
-/* ==========================================================================
+    /* ==========================================================================
     Sponsor section
    ========================================================================== */
-    
     .app-sponsor__content {
         padding: 5%;
     }
-    
     .app-sponsor__content h1 {
         font-size: 3rem;
     }
-
-/* ==========================================================================
+    /* ==========================================================================
     Footer
    ========================================================================== */
-
     .footer ul {
         width: 13%;
     }
