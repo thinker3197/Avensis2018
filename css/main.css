@@ -146,7 +146,7 @@ body {
     justify-content: space-between;
     width: 100%;
     margin: 3%;
-    z-index: 1;
+    /* z-index: 1; */
     height: 10%;
     padding: 0 3%;
 }
@@ -157,11 +157,9 @@ body {
     cursor: pointer;
     background: #ff00f9;
     padding: 16px 15px;
-}
-
-.app__nav--logo img {
-    width: 75%;
-    height: auto;
+    position: relative;
+    z-index: 11;
+    overflow: hidden;
 }
 
 .app__nav--menu > div {
@@ -170,7 +168,11 @@ body {
     background: #ffffff;
     display: block;
     margin: 3px 0;
-    transition: width 0.2s;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
 }
 
 .app__nav--menu > div:nth-child(2) {
@@ -179,6 +181,29 @@ body {
 
 .app__nav--menu:hover > div:nth-child(2) {
     width: 20px;
+}
+
+.app__nav--menu.open > div:nth-child(1) {
+    transform:  rotate(45deg) translateY(-3px);
+    height: 3px;
+    width: 22px;
+}
+
+.app__nav--menu.open > div:nth-child(2) {
+    opacity: 0;
+}
+
+
+.app__nav--menu.open > div:nth-child(3) {
+    transform:  rotate(-45deg) translateY(3px);
+    height: 3px;
+    width: 22px;
+}
+
+.app__nav--logo img {
+    width: 75%;
+    height: auto;
+    position: relative;
 }
 
 .app__scene {
@@ -242,6 +267,39 @@ body {
     padding: 5% 15%;
     border-radius: 50px;
     font-size: 20px;
+}
+
+/* ==========================================================================
+    Navigation section
+   ========================================================================== */
+
+.app-nav-wrapper {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background: #000067;
+    position: fixed;
+    z-index: 10;
+    transition: all 0.25s ease-in;
+}
+
+.app-nav-wrapper__content {
+    list-style: none;
+    padding: 0;
+}
+
+.app-nav-wrapper__content li {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 10% 0;
+    cursor: pointer;
+    font-weight: 500;  
 }
 
 /* ==========================================================================
@@ -523,7 +581,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background:#282828;
+    background: #181818;
     color: #ffffff;
     padding: 0 5%;
 }
@@ -564,6 +622,13 @@ body {
 
 .hidden {
     display: none !important;
+}
+
+/* 
+ * Disable scroll on element
+ */
+.no-scroll {
+    overflow: hidden;
 }
 
 /* 
@@ -625,7 +690,8 @@ body {
 
 .invisible {
     min-height: 0;
-    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 }
 
 
@@ -714,6 +780,15 @@ body {
     .app__content button {
         margin-top: 5%;
         padding: 3.5% 15%;
+    }
+    
+    .app-nav-wrapper__content li {
+        font-size: 2.5rem;
+        margin: 12% 0; 
+    }
+    
+    .app-nav-wrapper__content li:hover {
+        text-decoration: line-through;
     }
 
 /* ==========================================================================
