@@ -27,7 +27,7 @@ const App = {
     }, 1000);
   },
   setState(state) {
-    const pos = document.getElementById('js-'+ state +'-section').offsetTop;
+    const pos = document.getElementById('js-'+ state +'-section').offsetTop || 0;
 
     window.location.hash = state;
 
@@ -71,7 +71,6 @@ const App = {
   },
   init() {
     this.addEventListeners();
-    this.setState("");
     this.activateTimer();
   }
 }
