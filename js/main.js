@@ -27,8 +27,11 @@ const App = {
     }, 1000);
   },
   setState(state) {
-    // TODO - Add router and use state to show history changes
+    const pos = document.getElementById('js-'+ state +'-section').offsetTop;
+
     window.location.hash = state;
+
+    window.scroll({top: pos, left: 0, behaviour: "smooth"});
   },
   addEventListeners() {
     const $navMenu = document.getElementById("js-nav-menu"),
