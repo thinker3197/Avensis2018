@@ -565,6 +565,13 @@ body {
 
 .app-sponsor__content ul>li {
     margin-bottom: 7%;
+    width: 200px;
+    margin-left: calc((100% - 200px)/2);
+}
+
+.app-sponsor__content ul > li > img {
+    max-width: 100%;
+    height: auto;
 }
 
 .app-sponsor__content button {
@@ -886,7 +893,7 @@ body {
     Sponsor section
    ========================================================================== */
     .app-sponsor {
-        height: auto;
+        height: 100vh;
     }
     .app-sponsor__content {
         padding: 3%;
@@ -906,8 +913,18 @@ body {
         flex-wrap: wrap;
     }
     .app-sponsor__content ul>li {
-        float: left;
+        width: 20%;
         margin: 2% 2%;
+    }
+    .app-sponsor__content ul>li>img {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    .app-sponsor__content ul>li>img:hover {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
     }
     .app-sponsor__content button {
         max-width: 250px;
