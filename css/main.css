@@ -638,7 +638,7 @@ body {
 }
 
 
-/* 
+/*
  * Disable scroll on element
  */
 
@@ -647,7 +647,7 @@ body {
 }
 
 
-/* 
+/*
  * Hide element for mobile devices
  */
 
@@ -886,7 +886,7 @@ body {
     Sponsor section
    ========================================================================== */
     .app-sponsor {
-        height: 100vh;
+        height: auto;
     }
     .app-sponsor__content {
         padding: 3%;
@@ -902,6 +902,8 @@ body {
     }
     .app-sponsor__content ul {
         margin-top: 0;
+        display: flex;
+        flex-wrap: wrap;
     }
     .app-sponsor__content ul>li {
         float: left;
