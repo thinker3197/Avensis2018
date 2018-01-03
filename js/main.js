@@ -1,6 +1,6 @@
 const App = {
   activateTimer(date) {
-    const endDate = new Date("Jan 22, 2018 12:00:00").getTime(),
+    const endDate = new Date("Jan 10, 2018 00:00:00").getTime(),
       $timer = document.getElementById("js-timer");
 
     let days, hours, minutes;
