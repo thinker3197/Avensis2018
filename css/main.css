@@ -800,7 +800,7 @@ body {
         margin: 12% 0;
     }
     .app-nav-wrapper__content li:hover {
-        text-decoration: line-through;
+        text-decoration: underline;
     }
     /* ==========================================================================
     About section
