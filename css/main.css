@@ -534,7 +534,7 @@ body {
 }
 
 .app-team__content .team__content--tile>img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -886,8 +886,12 @@ body {
     }
     .app-team__content .team__content--tile {
         cursor: pointer;
-        height: auto;
-        width: 20%;
+        width: 200px;
+        height: 200px;
+    }
+    .team__content--tile > img {
+      width: 100%;
+      /*height: auto;*/
     }
     /* ==========================================================================
     Sponsor section
