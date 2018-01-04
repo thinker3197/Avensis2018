@@ -894,11 +894,11 @@ body {
     .app-team__content .team__content--tile {
         cursor: pointer;
         width: 20%;
-        height: 200px;
+        height: 160px;
     }
     .team__content--tile > img {
       width: 100%;
-      /*height: auto;*/
+      height: auto;
     }
 
     /* ==========================================================================
