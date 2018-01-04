@@ -441,7 +441,7 @@ body {
 }
 
 .app-message__image {
-    background: url(../img/msg-bg.png) center center no-repeat;
+    background: url(../img/msg-bg.jpg) center center no-repeat;
     background-size: cover;
     position: relative;
 }
