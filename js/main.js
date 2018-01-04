@@ -10,16 +10,23 @@ const App = {
 
     const $msgText = document.getElementById('js-message-txt'),
       $msgAuth = document.getElementById('js-message-auth'),
-      $slider = document.getElementById('js-slider');
+      $slider = document.getElementById('js-slider'),
+      $msgContent = document.getElementById('js-msg-content');
 
     $slider.addEventListener('click', (e) => {
       const index = +e.target.dataset.index;
+      
+      $msgContent.style.opacity = 0;
 
-      $msgText.innerHTML = content[index].msg;
-      $msgAuth.innerHTML = '- ' + content[index].auth;
-
-      $slider.children[index].classList.add('active');
-      $slider.children[index !== 0 ? 0 : 1].classList.remove('active');
+      setTimeout(() => {
+        $msgText.innerHTML = content[index].msg;
+        $msgAuth.innerHTML = '- ' + content[index].auth;
+  
+        $slider.children[index].classList.add('active');
+        $slider.children[index !== 0 ? 0 : 1].classList.remove('active');
+        
+        $msgContent.style.opacity = 1;
+      }, 300);
     });
   },
   activateTimer(date) {

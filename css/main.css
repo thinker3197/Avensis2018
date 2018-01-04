@@ -386,6 +386,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 7% 5%;
+    transition: all 0.25s ease-in;
 }
 
 .app-message__content .message__content--msg {
