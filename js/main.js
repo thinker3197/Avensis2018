@@ -2,10 +2,10 @@ const App = {
   activateSlider() {
     const content = [{
       auth: 'Prof. KP Chaudhary',
-      msg: 'I am delighted to announce the commencement of AVENSIS 2017.Due to the ingenuity and vivacity of our students this fest has attained a marked grandeur with time so much so that it now seems to embody the pride of our institution'
+      msg: 'Its a matter of great privilege and pleasure for me to announce the commencement of avensis 2018. With consistent hard work and perseverance of our students, they have embarked on this continuous journey with a passionate attitude to place our institute as a hallmark of technical and scientific excellence.'
     }, {
       auth: 'Dr. Rinky Dwivedi',
-      msg: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries'
+      msg: 'Avensis 2018 is back with a flavour innovative skill sets of our students who would showcase their strengths and competences which would raise the aspirations of every young mind. I take pride in elaborating the fact that our fellow students have put in lots of sincere efforts to ake this Avensis a grand success.'
     }];
 
     const $msgText = document.getElementById('js-message-txt'),
