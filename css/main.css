@@ -894,7 +894,7 @@ body {
     .app-team__content .team__content--tile {
         cursor: pointer;
         width: 20%;
-        height: 160px;
+        height: 200px;
     }
     .team__content--tile > img {
       width: 100%;
