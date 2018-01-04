@@ -589,6 +589,12 @@ body {
     padding: 5% 10%;
     border-radius: 100px;
     background-color: #00eee3;
+    transition: all 0.25s;
+}
+
+.app-sponsor__content button:hover {
+    box-shadow: 0 4px 8px 0 rgba(2, 188, 179, 0.5);
+    transform: translate(-3px, -3px);
 }
 
 .app-sponsor__image {
