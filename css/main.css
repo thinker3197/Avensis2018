@@ -529,6 +529,7 @@ body {
     background: #fff;
     position: fixed;
     z-index: 11;
+    overflow: scroll;
     transition: all 0.25s ease-in;
 }
 
@@ -588,6 +589,88 @@ body {
     height: 3px;
     width: 22px;
 }
+
+.event-desc__content {
+    width: 100%;
+}
+
+.event-desc__content .desc-content {
+    margin: 5% 0;
+    text-align: left;
+}
+
+.event-desc__content .desc-content > h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.event-desc__content .desc-content > p {
+    font-size: 0.9rem;
+}
+
+.event-desc__content .desc-content > h3 {
+    font-size: 1.2rem;
+}
+
+.event-desc__content .desc-content > ul {
+    list-style: none;
+}
+
+.event-desc__content .desc-content > ul > li {
+    margin: 4% 2%;
+    font-size: 0.9rem;
+}
+
+.event-desc__content .desc-link {
+    display: flex;
+    align-items: center;
+    margin: 6% 0;
+}
+
+.event-desc__content .desc-link > p{
+    margin: 0;
+    font-weight: bold;
+}
+
+.event-desc__content .desc-link > i{
+    margin-left: 3%;
+    font-size: 1.3rem;
+    color: #3b5998;
+}
+
+.event-desc__content .desc-seperator {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.event-desc__content .desc-seperator::before, .event-desc__content .desc-seperator::after {
+    content: '';
+    height: 4px;
+    width: 30%;
+    position: absolute;
+    background: #f1f1f1;
+    top: 26px;
+}
+
+.event-desc__content .desc-seperator::before {
+    left: 0;
+}
+
+.event-desc__content .desc-seperator::after {
+    right: 0;
+}
+
+.event-desc__content .desc-seperator > svg {
+    height: 50px;
+    width: 50px;
+    padding: 2%;
+}
+
+.event-desc__content .desc-seperator > svg:nth-child(1) {
+    width: 35px;
+}
+
 
 /* ==========================================================================
     Team section
