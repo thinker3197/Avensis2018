@@ -1,5 +1,7 @@
 const App = {
   activateTiles() {
+    let $activeTile = null;
+
     const $eventTile = document.getElementById('js-event-tile'),
       $eventDesc = document.getElementById('js-event-desc'),
       $eventCategory = document.getElementById('js-event-category'),
@@ -25,21 +27,32 @@ const App = {
       document.body.classList.add('no-scroll');
 
       if(category === 'technical') {
+        $activeTile = document.getElementById('js-tile-technical');
+
         $eventCategory.innerHTML = 'Technical';
         $eventTag.innerHTML = 'Ideate. Innovate. Create.';
       } else if(category === 'robotics') {
+        $activeTile = document.getElementById('js-tile-robotics');
+
         $eventCategory.innerHTML = 'Robotics';
         $eventTag.innerHTML = 'Learn to build. Build to play. Play to win.';
       } else if(category === 'literary') {
+        $activeTile = document.getElementById('js-tile-literary');
+
         $eventCategory.innerHTML = 'Literary & Quiz';
         $eventTag.innerHTML = 'Come. See. Conquer.';
       } else {
+        $activeTile = document.getElementById('js-tile-fnc');
+
         $eventCategory.innerHTML = 'Fun ’n’ Creativity';
         $eventTag.innerHTML = 'Fight for glory';
       }
+
+      $activeTile.classList.remove('hidden');
     });
 
     $eventCross.addEventListener('click', (e) => {
+      $activeTile.classList.add('hidden');
       $eventDesc.classList.add('invisible');
       document.body.classList.remove('no-scroll');      
     });

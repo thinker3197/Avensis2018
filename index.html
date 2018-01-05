@@ -187,7 +187,7 @@
                 </div>
             </div>
             <div class="col-sm-12 app-event-desc__content">
-                <section class="event-desc__content event-desc__content--techincal">
+                <section class="event-desc__content event-desc__content--techincal hidden" id="js-tile-technical">
                     <div class="desc-content">
                         <h1>Algo Jam</h1>
                         <p>It is an algorithm based event divided into 3 rounds. First round will be an online round organised
@@ -467,16 +467,632 @@
                         </div>
                     </div>
                 </section>
-                <section class="event-desc__content event-desc__content--robotics">
-
+                <section class="event-desc__content event-desc__content--robotics hidden" id="js-tile-robotics">
+                    <div class="desc-content">
+                        <h1>Line Following Bot</h1>
+                        <p>The autonomous robot will begin its run from an initial marked position in a dark isolated room.
+                            It will follow the line strip beneath it and would cover the track. The robot has to decide its
+                            path by sensing the line. The objective is to cover the entire track in least possible time with
+                            sufficient accuracy.
+                        </p>
+                        <h3>Rounds :</h3>
+                        <h4>Round 1</h4>
+                        <ul>
+                            <li>- There will be a single track.</li>
+                            <li>- There is no such limit on the time of completion of the bot run however the team which completes
+                                the run in minimum time qualifies for the next round.</li>
+                            <li>- Maximum of 8 hand touches (but with time penalty) and one hand pick (with extra time penalty)
+                                is allowed throughout the round in order to adjust its position if it is heading wrong.</li>
+                            <li>- There will be one checkpoint and if it gets skipped, additional penalty will be charged accordingly.</li>
+                            <li>- The team cannot make any programming changes in the course once the bot starts its run.</li>
+                            <li>- Calibration time will be provided before the competition.</li>
+                        </ul>
+                        <h4>Round 2</h4>
+                        <ul>
+                            <li>- Track complexity increases this time.</li>
+                            <li>- Each team will have maximum of 5 minutes to complete the track.</li>
+                            <li>- Maximum of 6 hand touches (but with penalty) and 2 hand picks (with extra penalty) are allowed
+                                throughout the round in order to adjust its position if it is heading wrong.</li>
+                            <li>- There will be four checkpoints and maximum two can be skipped but penalty will be charged accordingly.</li>
+                            <li>- The team cannot make any programming changes in the course once the bot starts its run.</li>
+                        </ul>
+                        <h3>Rules :</h3>
+                        <ul>
+                            <li>- Decision of chief organizers and event heads is final and every participant has to accept it.</li>
+                            <li>- Round 1 is completing the track efficiently and in less time.</li>
+                            <li>- Clearing round 1 in an average minimum stipulated time ensures qualification to the next round.</li>
+                            <li>- Each team can have maximum of 4 members.</li>
+                            <li>- Each team should have unique participants i.e. it cannot have any common member.</li>
+                            <li>- Cross college teams are allowed.</li>
+                            <li>- The Right spirit of participation and discipline (during the competition) is expected from
+                                the participants.</li>
+                        </ul>
+                        <h3>Event :</h3>
+                        <ul>
+                            <li>- There will be a line present in the arena. This line can be white on black background or black
+                                on white background.</li>
+                            <li>- The thickness of line will not be the same.</li>
+                            <li>- The track will have breaks in it i.e. gaps.</li>
+                            <li>- In case the robot is not able to cross the gap they can reposition it but marks will be deducted
+                                for it.</li>
+                        </ul>
+                        <h3>Restart & Timeout :</h3>
+                        <ul>
+                            <li>- A maximum of 1 Timeouts of 5 Minutes each may be taken in the second round only.</li>
+                            <li>- A penalty will be rewarded for each Timeout taken by the team and the robots will start from
+                                the start zone.</li>
+                            <li>- The participants can have a maximum of 2 restarts for rounds. A penalty will be imposed for
+                                each restart.</li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Carnage</h1>
+                        <p>This is an event with an aim to construct an autonomous bot which can successfully pass through each
+                            of the hurdle in a specified order. The teams will compete on completing the course in the fastest
+                            time possible and rack up the most points which are awarded on each successful hurdle pass.
+                        </p>
+                        <h3>Phases :</h3>
+                        <ul>
+                            <li>Round 1 : Qualification on the basis of time. The competition is based upon time trail system.
+                                This round will act as qualifying round for each team. The top team to qualifying makes it
+                                on the basis of time trials.
+                            </li>
+                            <li>Round 2 : Elimination on the basis of perfection and time. This will act as the final round.
+                                All about final round will be notified on the final day.
+                            </li>
+                        </ul>
+                        <h3>Rules :</h3>
+                        <ul>
+                            <li>- Each team can have a maximum of 4 members. </li>
+                            <li>- Each team should have unique robot to participate in the event.</li>
+                            <li>- Cross college teams are allowed</li>
+                            <li>- The Right spirit of participation and discipline (during the competition) is expected from
+                                the participants.</li>
+                            <li>- The decision of the EVENT heads of CARNAGE will be final and binding on all the participants
+                                without any exceptions.</li>
+                            <li>- The event will be totally time based and additional time penalties will be declared before
+                                the event starts.</li>
+                            <li>- It is the participant’s responsibility to know about all the rules and then start to perform.</li>
+                            <li>- Scores of any team will not be declared and will be kept confidential.</li>
+                        </ul>
+                        <h3>Bot Specifications :</h3>
+                        <ul>
+                            <li>- The maximum dimension of the robot can be 30 x 30 cm (l x b).</li>
+                            <li>- The robot may be wired or wireless.</li>
+                            <li>- The length of the wire (for wired bots) should be long enough to cover the whole track and
+                                wire should remain slack during the complete run (at least 10 m).</li>
+                            <li>- Max weight must not exceed 6 kg.</li>
+                            <li>- The power supply will be provided maximum up to 24Volt, DC socket for 220Volt will be provided
+                                by the organizing team</li>
+                        </ul>
+                        <h3>Penalties & Disualifications :</h3>
+                        <ul>
+                            <li>- Restart during the run will incur a penalty leading to deduction of points.</li>
+                            <li>- Going through a hurdle out of order will result in a penalty.</li>
+                            <li>- Disturbing or touching the hurdle while passing through will give the team no points.</li>
+                            <li>- Breaking or vandalizing any part of the field will result in instant disqualification. This
+                                includes breaking any hurdle pole or getting the floor excessively dirty such that the numbers
+                                or patterns on the ground cannot be read.</li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Robo Maze</h1>
+                        <p>The robots will have to start from one end of the maze, make the required turns and move till the
+                            far end of the maze in the minimum time and with minimum penalties possible, while covering all
+                            the mandatory paths. Robots have to qualify first round so as to make their way for the final
+                            maze.
+                        </p>
+                        <h3>Rounds :</h3>
+                        <h4>Round 1</h4>
+                        <ul>
+                            <li>Round 1 comprises of a basic maze which tests through some of the complexities.
+                            </li>
+                            <li>The track is a simple unidirectional maze, and a few pockets.
+                            </li>
+                            <li>The participants clearing the round one with, maximum score will move towards the round two of
+                                the event.</li>
+                        </ul>
+                        <h4>Round 2</h4>
+                        <ul>
+                            <li>Round 2 will have higher level of difficulty then round 1.</li>
+                            <li>Here we have a multi-directional maze.</li>
+                            <li>This will be the final round and the team with the maximum score will be winning the event.</li>
+                        </ul>
+                        <h3>Rules :</h3>
+                        <ul>
+                            <li>- Decision of organizers is final and binding, though appeals will be entertained</li>
+                            <li>- Each team can have maximum of 4 members.</li>
+                            <li>- Each team should have unique participants i.e. they cannot have any common members.</li>
+                            <li>- Cross college teams are allowed.</li>
+                            <li>- The Right spirit of participation and discipline (during the competition) is expected from
+                                the participants.</li>
+                            <li>- After the maze is revealed, teams will have limited time to make the required modifications.</li>
+                            <li>- Touching the side walls and the front wall will be penalized.</li>
+                            <li>- There will be checkpoints, bots can be reset to the checkpoints anytime, but this will obviously
+                                deduct points.</li>
+                        </ul>
+                        <h3>Disqualification :</h3>
+                        <ul>
+                            <li>- The robot can’t damage the walls or floor of the maze in any manner whether it is scratching,
+                                burning, breaking or anything else.</li>
+                            <li>- The robots have to be in contact with the floor of the maze and can’t jump or fly through any
+                                obstacle.
+                            </li>
+                            <li>- The length of the wire (for wired bots) should be long enough to cover the whole track and
+                                wire should remain slack during the complete run (at least 10 m).</li>
+                            <li>- Only and only sensor controlled robots can participate in the competition and not remote controlled
+                                or any other controlled robots.
+                            </li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Junkyard</h1>
+                        <h3>Round 1 (Day 1) :</h3>
+                        <p>Time per participation: 5-6 minutes.
+                            <br>Qualified teams: 10
+                            <br>Games: Dr. Driving / Paper plane / flip the bottle (tentative)</p>
+                        <p>Each team will get a chance to play the games mentioned above. In Dr. Driving the teams have to make
+                            the RC car cross a track full of hurdles in minimum time. The points will be awarded as per the
+                            time taken. In paper plane game, the teams have to try and fly the paper plane through the hole
+                            in the cardboard sheet. The points will be awarded as per which hole the plane went through.
+                            The third and the last game would be the flip the bottle game. The teams will be awarded as per
+                            the number of successful bottle flips. The cumulative score of the three games will be calculated
+                            and recorded. The top 10 teams will qualify for the second round.</p>
+                        <h3>Round 2 (Day 1) :</h3>
+                        <p>Time per participation: 10-12 minutes
+                            <br>Qualified teams: 5
+                            <br>Games: Dart game / Ping-pong basketball</p>
+                        <p>This round consists of 1vs1 elimination wherein the 10 teams will play against each other such that
+                            only 5 teams will qualify to the final round.
+                            <br>The elimination will take place in a way that number 1 team in Round 1 will play with number
+                            2 team in Round 1, number 3 with 4 and so on. Losing will lead to direct elimination. In the
+                            dart game the teams will have to hit the target board and try to score the maximum points. In
+                            the ping-pong basketball game, the teams will have to score points by putting the ping-pong ball
+                            in the basket. The cumulative score of the two games will decide the winner. The 5 winner teams
+                            will go to the next round.</p>
+                        <h3>Final Round (Day 1) :</h3>
+                        <p>25-30 minutes
+                            <br>Qualified teams: 1
+                            <br>Games: Best out of waste</p>
+                        <p>In this round the 5 teams will simultaneously build a working structure similar to the prototype
+                            showcased to them. Teams will use all the waste items or junk and recycle them to make a new
+                            item. The teams will be judged according to the neatness and the working of their final item
+                            and the winner will be declared.</p>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Robo Rugby</h1>
+                        <p>Robo Rugby is an event in which robots try to score a point by hitting the balls into the scoring
+                            zone at both end points of a playing table. A match of Robo Rugby
+                            <br> Involves two small robots and some balls of different colours. Every coloured ball clutches
+                            different points. One robot is assigned to each team and the position of each ball at the end
+                            of the game governs the final score and hence the winner.
+                            <br> It is the time to concentrate on the hacking and slashing of the robots. So, make your bots
+                            ready and leave them at the arena to feel the game. The game of SOCCER!!
+                        </p>
+                        <h3>Rounds :</h3>
+                        <ul>
+                            <li>Round 1 : Chase the run and win the balls
+                                <br>In the first round, participants have to find the balls placed in the arena and tackle the
+                                maximum number of balls towards the goal point in fixed amount of time.</li>
+                            <li>Round 2: Tackle the hurdles
+                                <br>In the second round, participants will have to take the ball from start to end point, facing
+                                some hurdles; bots need to tackle them all in minimum time possible and complete the round</li>
+                            <li>Round 3: Get set Goal
+                                <br>The Last round will include a rugby match between two bots, Participants need to compete
+                                their opponent bot and score the goal.</li>
+                        </ul>
+                        <h3>Rules :</h3>
+                        <ul>
+                            <li>- Each team can consist a maximum of 4 members.</li>
+                            <li>- Each team should have a unique bot.</li>
+                            <li>- Cross college teams are allowed.</li>
+                            <li>- The event will be totally time based and additional time penalties will be declared before
+                                the event starts.</li>
+                            <li>- The Right spirit of participation and discipline (during the competition) is expected from
+                                the participants.</li>
+                        </ul>
+                        <h3>Specifications :</h3>
+                        <ul>
+                            <li>- Size of the bot: 30 X 30 X 20 (in cms)</li>
+                            <li>- Minimum length of wire allowed is 10m</li>
+                            <li>- Maximum length of extension allowed is 10cms</li>
+                            <li>- Maximum power supply: 24(volts)</li>
+                        </ul>
+                        <h3>Important Notification :</h3>
+                        <ul>
+                            <li>- In the Event we will be providing the teams with only AC (220V, 50Hz) power supply source.</li>
+                            <li>- The decision of the EVENT HEADS will be final and binding on all the Participants without any
+                                exceptions.
+                            </li>
+                        </ul>
+                        <h3>Winning Criteria :</h3>
+                        <ul>
+                            <li>- The game is based on the scores.</li>
+                            <li>- The team with maximum score will win.</li>
+                            <li>- The factors affecting the result of the event are: Accuracy, No. of balls collected & No. of
+                                penalties
+                            </li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Robo Wars</h1>
+                        <p>The autonomous robots will be provided an arena to fight upon. There will be some time limit. The
+                            robot has to depart another robot from the arena for a clear win.
+                        </p>
+                        <h3>Rounds :</h3>
+                        <h4>Round 1</h4>
+                        <ul>
+                            <li>- A large arena will be provided.</li>
+                            <li>- Maximum time limit will be 5 minutes.</li>
+                            <li>- Remote controlled robot must depart another robot from the arena for a clear win.</li>
+                            <li>- A bot will be declared immobile (out) if it cannot exhibit linear motion of at least 1 inch
+                                within 20 seconds.</li>
+                        </ul>
+                        <h4>Round 2</h4>
+                        <ul>
+                            <li>- A large arena will be provided.</li>
+                            <li>- Maximum time limit will be 7 minutes</li>
+                            <li>- Remote controlled robot must depart another robot from the arena for a clear win.</li>
+                            <li>- A bot will be declared immobile (out) if it cannot exhibit linear motion of at least 1 inch
+                                within 20 seconds. If no robot is departed from the arena in the given amount of time, the
+                                round shall continue until one opponent is departed out of arena.</li>
+                        </ul>
+                        <h3>Main Rules and Regulations of Event :</h3>
+                        <ul>
+                            <li>- Maximum limit for the clash of combatants inside arena is 5 minutes for the first round and
+                                7 minutes for the second round.</li>
+                            <li>- The bot will be inspected for safety before event begins. If not fit for stage; it will be
+                                discarded.
+                            </li>
+                            <li>- Teams that are not ready when called for Battle will be considered to have declared a walkover
+                                (within 5 minutes).</li>
+                            <li>- A bot will be declared immobile (out) if it cannot exhibit linear motion of at least 1 inch
+                                within 30 seconds.</li>
+                            <li>- The bot cannot be split into two subunits Two distinct parts cannot be connected by a flexible
+                                cable will be considered separate units.</li>
+                            <li>Event heads decision will be final and binding.</li>
+                            <li>Rules can be changed according to Event heads.</li>
+                            <li>Voltage supply – 0-12/0-24 9. Robot size: - 40 X 40 X 40 (Light weight) & 80 X 80 X80 (Heavy
+                                weight).</li>
+                            <li>Robot can be Walking or Rolling type.</li>
+                            <li>4 Members maximum in a team.</li>
+                        </ul>
+                        <h3>Bot Specification :</h3>
+                        <ul>
+                            <li>- Light weight: - Up to 10 kg</li>
+                            <li>- Heavy weight: - Up to 20 kg</li>
+                        </ul>
+                        <h3>Restart & Timeout</h3>
+                        <ul>
+                            <li>A maximum of 1 Timeout of 1 Minute each may be taken in the second round only.
+                            </li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
                 </section>
-                <section class="event-desc__content event-desc__content--literary">
-
+                <section class="event-desc__content event-desc__content--literary hidden" id="js-tile-literary">
+                    <div class="desc-content">
+                        <h1>Netflix & Quiz</h1>
+                        <p>So you think you are a TV show fanatic? Do you spend all your time binge watching those TV shows
+                            which take you from a boring life to that parallel universe where anything and everything is
+                            possible.
+                            <br>Avensis literary department presents Netflix and quiz – The stage is set to find the greatest
+                            screen squatter of all time.
+                        </p>
+                        <h3>Rounds :</h3>
+                        <p>The event will consist two rounds (internal division is possible).
+                        </p>
+                        <h3>Rules :</h3>
+                        <ul>
+                            <li>- Participation in teams of 2 or 3</li>
+                            <li>- Cross-college teams are allowed</li>
+                            <li>- Be On Time</li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Here, have a meme Dank, memes for broken dreams</h1>
+                        <p>It's time to let everyone know how good you are at making dem memes. So, let's get down to the arena
+                            of memes; memes that were our survivor this year, and join us at AVENSIS 2018. Get ready to take
+                            up a super exciting challenge where you have to design a meme in merely a few minutes!
+                        </p>
+                        <h3>Rounds :</h3>
+                        <ul>
+                            <li>- Round 1 : Frustated Engineer</li>
+                            <li>- Round 2 : Provide a template</li>
+                            <li>- Round 3 : On the spot meme</li>
+                        </ul>
+                        <h3>Rules :</h3>
+                        <ul>
+                            <li>- No meme will be accepted after the time limit .</li>
+                            <li>- Meme must not be copied from internet.</li>
+                            <li>- The meme must not contain any vulgarity</li>
+                            <li>- There must be no use of abusive language.</li>
+                            <li>- In case of conflict, organisers decision will be final.</li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Slam poetry : Tape a tale</h1>
+                        <p>We are all about stories, we want to listen to stories and we want our stories be heard because stories
+                            have the power to change the world. So here's a chance for all the talented storytellers and
+                            poets out there to enthral and captivate the audience with their engaging plotline, descriptive
+                            narratives through their mesmerizing poems.
+                        </p>
+                        <h3>Rules :</h3>
+                        <ul>
+                            <li>- Single entry or groups.</li>
+                            <li>- Themes: Comic,Fantasy,Romantic,Bollywood,Erotic,Political,Peace,Nature,Personal events ,And
+                                any theme that can be thought of.</li>
+                            <li>- Time for each participant: 4-5 mins maximum</li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Man knows pop – Pop culture Quiz</h1>
+                        <p>Quizzers!! It's time for you to tell us that you're one hell of a pop culture fanatic because we
+                            are providing you the most entertaining platform to showcase your skills!! Veda - The Quiz Society
+                            of MSI is proud to present Man Knows Pop- Ultimate Pop-culture quiz as a part of Avensis’18 Annual
+                            Tech Fest of MSIT. From memes to movie trivia, brush up your knowledge of everything you have
+                            already seen, played and read!
+                        </p>
+                        <h3>Rules :</h3>
+                        <ul>
+                            <li>- Participation in teams of two</li>
+                            <li>- Cross-college teams are allowed</li>
+                            <li>- Lone wolfs are allowed</li>
+                            <li>- Everyone should carry a valid college ID card</li>
+                            <li>- Man can never be hot but can't say the same about you if you arrive late</li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Photowalk</h1>
+                        <p>Do you get to hang out with people that like the same thing you do? Don’t you want an opportunity
+                            to share your images with others? If yes, then here’s your chance to prove your ideas. Avensis
+                            2018 brings to you the most inspiring event to challenge yourself “PHOTOWALK”. There’s a single
+                            round. The participants will be given 2 hours to capture their creativity. They can click numerous
+                            photos but have to submit a single photo with the best caption of theirs to the email id -
+                            <a href="mailto:simrangharana@gmail.com" target="_top">simrangharana@gmail.com</a>
+                        </p>
+                        <h3>Categories :</h3>
+                        <ul>
+                            <li>- DSLR photography</li>
+                            <li>- Smartphone</li>
+                        </ul>
+                        <h3>Rules :</h3>
+                        <ul>
+                            <li>- Solo participation.</li>
+                            <li>- Participants must bring in their own necessary equipments, for example, their cameras, lenses,
+                                smartphones etc.</li>
+                            <li>- The participants are not allowed to download any picture from the internet.</li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
                 </section>
-                <section class="event-desc__content event-desc__content--fnc">
+                <section class="event-desc__content event-desc__content--fnc hidden" id="js-tile-fnc">
+                    <div class="desc-content">
+                        <h1>Ultimate Challenge</h1>
+                        <p>Ultimate challenge will put the strength, coordination and compatibility of your team of two to test.
+                            The contestants will be challenged in different ways and their ability to handle tough situations
+                            will be analysed.
+                        </p>
+                        <h3>Rules</h3>
+                        <ul>
+                            <li>- A team of two will participate. </li>
+                            <li>- Any kind of misbehavior will not be accepted. </li>
+                            <li>- Each round carries it's own time period and set of rules to be followed. </li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Treasure Hunt</h1>
+                        <p>Awaken the explorer in you. Team up, race against time, complete interesting tasks and crack arduous
+                            clues. Push your limits and embrace the victory.
 
+                        </p>
+                        <h3>Rules</h3>
+                        <ul>
+                            <li>- Every team should have 2-4 members.</li>
+                            <li>- Requirements for the event will be announced on the day of the event. </li>
+                            <li>- Tampering with other team’s clues may lead to disqualification. </li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Filmy Dangal</h1>
+                        <p>In this event all one need is the passionate fan of Bollywood who is going to quench his thirst for
+                            the same by meeting the various ROUNDS based on Bollywood !
+
+                        </p>
+                        <h3>Rules</h3>
+                        <ul>
+                            <li>- Team of 2. </li>
+                            <li>- Each round carries it's own penalties and time limit. </li>
+                            <li>- Each round has it's own set of rules that team must adhere to. </li>
+
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Vortex</h1>
+                        <p>Passionate about dancing? Unity crew presents VORTEX - collaboration of all styles and dance forms,
+                            the one - of - its kind dance competition.Unleash the dancer in you and prove your worth by competing
+                            with some of the best teams on the floor and win amazing cash prizes and goodies!
+
+                        </p>
+                        <h3>Rules</h3>
+                        <ul>
+                            <li>- Reach on time alloted. </li>
+                            <li>- Judge's decision will be final. </li>
+                            <li>- Performance time should be appropriate. </li>
+
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
+                    <div class="desc-content">
+                        <h1>Gali Sports</h1>
+                        <p>Play where the pros play Simplicity of thought with a perfect blend of enthusiasm to create synergy
+                            💯. An event of athleticism and physical dexterity along with super fun and extravagant platform
+                            to showcase your inner sporty beast ✨
+
+                        </p>
+                        <h3>Events</h3>
+                        <ul>
+                            <li>- Gali cricket. </li>
+                            <li>- Panna ko </li>
+                            <li>- Tetherball </li>
+                            <li>- Tug of war </li>
+                            <li>- Bucket challenge. </li>
+                        </ul>
+                        <h3>Rules</h3>
+                        <ul>
+                            <li>- Individual and team participation. </li>
+                            <li>- Games follow their normal rules. </li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-content">
+                        <h1>What The Food</h1>
+                        <p>An event only for foodies. It will include fun tasks and delicious food. Do come guys and give your
+                            taste buds a new experience. So don’t miss the fun because its trick or treat. Here taste meets
+                            the myth.
+                        </p>
+                        <h3>Rules</h3>
+                        <ul>
+                            <li>- Individual players no teams allowed.</li>
+                        </ul>
+                        <div class="desc-link">
+                            <p>Check out our facebook page : </p>
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="desc-seperator">
+                        <img src="img/Triangle.svg" />
+                        <img src="img/Oval.svg" />
+                        <img src="img/Rectangle.svg" />
+                    </div>
                 </section>
             </div>
+            <!-- <button>Register</button> -->
         </div>
 
         <div class="row app-team" id="js-team-section">
