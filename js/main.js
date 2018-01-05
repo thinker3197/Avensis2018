@@ -1,4 +1,14 @@
 const App = {
+  loadImagesAsync() {
+    const $imgAsync = document.getElementsByClassName('load-async');
+
+    [].forEach.call($imgAsync, (img) => {
+      img.setAttribute('src', img.getAttribute('data-src'));
+      img.onload = function() {
+        img.removeAttribute('data-src');
+      };
+    });
+  },
   activateTiles() {
     let $activeTile = null;
 
@@ -169,6 +179,7 @@ const App = {
     });
   },
   init() {
+    this.loadImagesAsync();
     this.activateNavbar();
     this.activateTimer();
     this.activateSlider();
