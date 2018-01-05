@@ -383,6 +383,12 @@ img[data-src] {
     margin-top: 25%;
 }
 
+.app-about__logo img {
+    margin-top: 25%;
+    max-width: 80%;
+    height: auto;
+}
+
 .app-about__content {
     background-color: #ffffff;
     display: flex;
@@ -717,6 +723,7 @@ img[data-src] {
     width: 33.33vw;
     float: left;
     overflow: hidden;
+    position: relative;
 }
 
 .app-team__content .team__content--tile>img {
@@ -724,14 +731,29 @@ img[data-src] {
     height: auto;
 }
 
+.overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  height: 100%;
+  width: 100%;
+  background: rgba(29, 106, 154, 0.72);
+  /*border: 1px solid white;*/
+  transition: opacity .2s, visibility .2s;
+}
 
- /*.team__content--tile > img:hover {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  transition-duration: 1s;
-}*/
+.overlay p {
+  margin-top: 50%;
+  font-size: 1.3em;
+}
+
+ .team__content--tile:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
 
 
 /* ==========================================================================
@@ -1127,8 +1149,8 @@ img[data-src] {
     }
     .app-team__content .team__content--tile {
         cursor: pointer;
-        width: 20%;
-        height: 200px;
+        width: calc(100%/6);
+        height: 150px;
     }
     .team__content--tile>img {
         width: 100%;
