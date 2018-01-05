@@ -18,6 +18,7 @@
     font-weight: bold;
 }
 
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -292,6 +293,7 @@ body {
     transform: translate(-3px, -3px);
 }
 
+
 /* ==========================================================================
     Navigation section
    ========================================================================== */
@@ -517,7 +519,10 @@ body {
     color: #999999;
 }
 
-/* events desc */
+
+/* ==========================================================================
+   Events description section
+   ========================================================================== */
 
 .app-event-desc {
     height: 100vh;
@@ -546,12 +551,12 @@ body {
     text-align: left;
 }
 
-.event-desc__head--title > h1 {
+.event-desc__head--title>h1 {
     font-size: 2rem;
     font-weight: bold;
 }
 
-.event-desc__head--title > p {
+.event-desc__head--title>p {
     margin: 0;
     font-weight: 500;
     color: #999999;
@@ -599,24 +604,24 @@ body {
     text-align: left;
 }
 
-.event-desc__content .desc-content > h1 {
+.event-desc__content .desc-content>h1 {
     font-size: 1.8rem;
     font-weight: 600;
 }
 
-.event-desc__content .desc-content > p {
+.event-desc__content .desc-content>p {
     font-size: 0.9rem;
 }
 
-.event-desc__content .desc-content > h3 {
+.event-desc__content .desc-content>h3 {
     font-size: 1.2rem;
 }
 
-.event-desc__content .desc-content > ul {
+.event-desc__content .desc-content>ul {
     list-style: none;
 }
 
-.event-desc__content .desc-content > ul > li {
+.event-desc__content .desc-content>ul>li {
     margin: 4% 2%;
     font-size: 0.9rem;
 }
@@ -627,12 +632,12 @@ body {
     margin: 6% 0;
 }
 
-.event-desc__content .desc-link > p{
+.event-desc__content .desc-link>p {
     margin: 0;
     font-weight: bold;
 }
 
-.event-desc__content .desc-link > i{
+.event-desc__content .desc-link>i {
     margin-left: 3%;
     font-size: 1.3rem;
     color: #3b5998;
@@ -644,7 +649,8 @@ body {
     position: relative;
 }
 
-.event-desc__content .desc-seperator::before, .event-desc__content .desc-seperator::after {
+.event-desc__content .desc-seperator::before,
+.event-desc__content .desc-seperator::after {
     content: '';
     height: 4px;
     width: 30%;
@@ -661,16 +667,11 @@ body {
     right: 0;
 }
 
-.event-desc__content .desc-seperator > svg {
-    height: 50px;
-    width: 50px;
-    padding: 2%;
+.event-desc__content .desc-seperator>img {
+    height: 60%;
+    width: auto;
+    margin: 4% 5px;
 }
-
-.event-desc__content .desc-seperator > svg:nth-child(1) {
-    width: 35px;
-}
-
 
 /* ==========================================================================
     Team section
@@ -710,6 +711,7 @@ body {
     height: auto;
 }
 
+
 /* .team__content--tile > img:hover {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -717,6 +719,7 @@ body {
   transform: scale(1.2);
   transition-duration: 1s;
 } */
+
 
 /* ==========================================================================
     Sponsor section
@@ -748,7 +751,7 @@ body {
     margin-left: calc((100% - 200px)/2);
 }
 
-.app-sponsor__content ul > li > img {
+.app-sponsor__content ul>li>img {
     max-width: 100%;
     height: auto;
 }
@@ -1057,6 +1060,44 @@ body {
         padding: 0;
     }
     /* ==========================================================================
+   Events description section
+   ========================================================================== */
+    .app-event-desc__head {
+        padding: 0 3%;
+    }
+    .event-desc__content .desc-content {
+        margin: 2%;
+    }
+    .event-desc__content .desc-content>ul>li {
+        margin: 2% 0;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    .event-desc__content .desc-content>p {
+        font-size: 1rem;
+    }
+    .event-desc__content .desc-link {
+        margin: 3% 0;
+    }
+    .event-desc__content .desc-link>i {
+        margin-left: 2%;
+    }
+    .event-desc__content .desc-seperator::before,
+    .event-desc__content .desc-seperator::after {
+        width: 40%;
+    }
+    .event-desc__content .desc-seperator::before {
+        left: 2%;
+    }
+    .event-desc__content .desc-seperator::after {
+        right: 2%;
+    }
+    .event-desc__content .desc-seperator>img {
+        height: 100%;
+        width: auto;
+        margin: 0 5px;
+    }
+    /* ==========================================================================
     Team section
    ========================================================================== */
     .app-team__title {
@@ -1074,11 +1115,10 @@ body {
         width: 20%;
         height: 200px;
     }
-    .team__content--tile > img {
-      width: 100%;
-      height: auto;
+    .team__content--tile>img {
+        width: 100%;
+        height: auto;
     }
-
     /* ==========================================================================
     Sponsor section
    ========================================================================== */
@@ -1203,6 +1243,15 @@ body {
     }
     .app-event__tile {
         height: 60%;
+    }
+    /* ==========================================================================
+   Events description section
+   ========================================================================== */
+    .event-desc__content .desc-content>ul>li {
+        margin: 1% 0;
+    }
+    .event-desc__content .desc-link>i {
+        margin-left: 1%;
     }
     /* ==========================================================================
     Team section
