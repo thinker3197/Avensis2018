@@ -289,7 +289,7 @@ img[data-src] {
     background: #00cbff;
     cursor: pointer;
     color: #ffffff;
-    margin-top: 15%;
+    margin-top: 0;
     padding: 5% 15%;
     border-radius: 50px;
     font-size: 20px;
@@ -974,7 +974,7 @@ img[data-src] {
         height: 75vh;
     }
     .app__content {
-        padding: 5% 0px;
+        padding: 2% 0px;
     }
     .app__content h1 {
         font-size: 4rem;
@@ -987,7 +987,7 @@ img[data-src] {
         font-size: 1.6rem;
     }
     .app__content button {
-        margin-top: 5%;
+        /*margin-top: 5%;*/
         padding: 3.5% 15%;
     }
     .app-nav-wrapper__content li {

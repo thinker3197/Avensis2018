@@ -64,7 +64,7 @@ const App = {
     $eventCross.addEventListener('click', (e) => {
       $activeTile.classList.add('hidden');
       $eventDesc.classList.add('invisible');
-      document.body.classList.remove('no-scroll');      
+      document.body.classList.remove('no-scroll');
     });
   },
   activateSlider() {
@@ -141,6 +141,7 @@ const App = {
     const $navMenu = document.getElementById("js-nav-menu"),
       $navList = document.getElementById("js-nav-list"),
       $navWrapper = document.getElementById("js-nav-wrapper");
+      $register = document.getElementById("js-register");
 
     const closeMenu = () => {
       document.body.classList.remove("no-scroll");
@@ -176,6 +177,10 @@ const App = {
       this.setState(state);
 
       closeMenu();
+    });
+
+    $register.addEventListener("click", (e) => {
+      this.setState("events");
     });
   },
   init() {
