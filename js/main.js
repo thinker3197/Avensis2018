@@ -16,17 +16,19 @@ const App = {
     $slider.addEventListener('click', (e) => {
       const index = +e.target.dataset.index;
       
-      $msgContent.style.opacity = 0;
+      if(e.target.nodeName === 'LI') {
+        $msgContent.style.opacity = 0;
 
-      setTimeout(() => {
-        $msgText.innerHTML = content[index].msg;
-        $msgAuth.innerHTML = '- ' + content[index].auth;
-  
-        $slider.children[index].classList.add('active');
-        $slider.children[index !== 0 ? 0 : 1].classList.remove('active');
-        
-        $msgContent.style.opacity = 1;
-      }, 300);
+        setTimeout(() => {
+          $msgText.innerHTML = content[index].msg;
+          $msgAuth.innerHTML = '- ' + content[index].auth;
+    
+          $slider.children[index].classList.add('active');
+          $slider.children[index !== 0 ? 0 : 1].classList.remove('active');
+          
+          $msgContent.style.opacity = 1;
+        }, 300);
+      }
     });
   },
   activateTimer(date) {
@@ -88,6 +90,8 @@ const App = {
 
 
     $navMenu.addEventListener("click", (e) => {
+      window.scroll({top: 0, left: 0});
+      
       if ($navMenu.classList.contains("open")) {
         closeMenu();
       } else {

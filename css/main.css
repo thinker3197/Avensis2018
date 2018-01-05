@@ -539,13 +539,13 @@ body {
     height: auto;
 }
 
-.team__content--tile > img:hover {
+/* .team__content--tile > img:hover {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
   transition-duration: 1s;
-}
+} */
 
 /* ==========================================================================
     Sponsor section
@@ -814,7 +814,7 @@ body {
         margin: 12% 0;
     }
     .app-nav-wrapper__content li:hover {
-        text-decoration: underline;
+        text-decoration: line-through;
     }
     /* ==========================================================================
     About section
