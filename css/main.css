@@ -517,6 +517,77 @@ body {
     color: #999999;
 }
 
+/* events desc */
+
+.app-event-desc {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background: #fff;
+    position: fixed;
+    z-index: 11;
+    transition: all 0.25s ease-in;
+}
+
+.app-event-desc__head {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+}
+
+.event-desc__head--title {
+    text-align: left;
+}
+
+.event-desc__head--title > h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.event-desc__head--title > p {
+    margin: 0;
+    font-weight: 500;
+    color: #999999;
+}
+
+.event-desc__head--cross {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: #AEAEAE;
+    padding: 16px 15px;
+    overflow: hidden;
+}
+
+.event-desc__head--cross>div {
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: 4px 0;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+.event-desc__head--cross>div:nth-child(1) {
+    transform: rotate(45deg) translateY(-6px);
+    height: 3px;
+    width: 22px;
+}
+
+.event-desc__head--cross>div:nth-child(2) {
+    transform: rotate(-45deg) translateY(6px);
+    height: 3px;
+    width: 22px;
+}
 
 /* ==========================================================================
     Team section

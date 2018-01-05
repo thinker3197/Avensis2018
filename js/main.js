@@ -1,4 +1,49 @@
 const App = {
+  activateTiles() {
+    const $eventTile = document.getElementById('js-event-tile'),
+      $eventDesc = document.getElementById('js-event-desc'),
+      $eventCategory = document.getElementById('js-event-category'),
+      $eventTag = document.getElementById('js-event-tag'),
+      $eventCross = document.getElementById('js-event-cross');
+
+    const getType = (node) => {
+      if ((node.nodeName === 'DIV' && node.id === 'tile-technical') || (node.nodeName === 'H2' && node.innerHTML === 'Technical') || (node.nodeName === 'P' && node.innerHTML.indexOf('Ideate') !== -1)) {
+        return 'technical';
+      } else if ((node.nodeName === 'DIV' && node.id === 'tile-robotics') || (node.nodeName === 'H2' && node.innerHTML.indexOf('Robotics') !== -1) || (node.nodeName === 'P' && node.innerHTML.indexOf('Learn') !== -1)) {
+        return 'robotics';
+      } else if ((node.nodeName === 'DIV' && node.id === 'tile-literary') || (node.nodeName === 'H2' && node.innerHTML.indexOf('Literary') !== -1) || (node.nodeName === 'P' && node.innerHTML.indexOf('Come') !== -1)) {
+        return 'literary';
+      } else {
+        return 'fnc';
+      }
+    }
+
+    $eventTile.addEventListener('click', (e) => {
+      const category = getType(e.target);
+
+      $eventDesc.classList.remove('invisible');
+      document.body.classList.add('no-scroll');
+
+      if(category === 'technical') {
+        $eventCategory.innerHTML = 'Technical';
+        $eventTag.innerHTML = 'Ideate. Innovate. Create.';
+      } else if(category === 'robotics') {
+        $eventCategory.innerHTML = 'Robotics';
+        $eventTag.innerHTML = 'Learn to build. Build to play. Play to win.';
+      } else if(category === 'literary') {
+        $eventCategory.innerHTML = 'Literary & Quiz';
+        $eventTag.innerHTML = 'Come. See. Conquer.';
+      } else {
+        $eventCategory.innerHTML = 'Fun ’n’ Creativity';
+        $eventTag.innerHTML = 'Fight for glory';
+      }
+    });
+
+    $eventCross.addEventListener('click', (e) => {
+      $eventDesc.classList.add('invisible');
+      document.body.classList.remove('no-scroll');      
+    });
+  },
   activateSlider() {
     const content = [{
       auth: 'Prof. KP Chaudhary',
@@ -15,17 +60,17 @@ const App = {
 
     $slider.addEventListener('click', (e) => {
       const index = +e.target.dataset.index;
-      
-      if(e.target.nodeName === 'LI') {
+
+      if (e.target.nodeName === 'LI') {
         $msgContent.style.opacity = 0;
 
         setTimeout(() => {
           $msgText.innerHTML = content[index].msg;
           $msgAuth.innerHTML = '- ' + content[index].auth;
-    
+
           $slider.children[index].classList.add('active');
           $slider.children[index !== 0 ? 0 : 1].classList.remove('active');
-          
+
           $msgContent.style.opacity = 1;
         }, 300);
       }
@@ -90,8 +135,11 @@ const App = {
 
 
     $navMenu.addEventListener("click", (e) => {
-      window.scroll({top: 0, left: 0});
-      
+      window.scroll({
+        top: 0,
+        left: 0
+      });
+
       if ($navMenu.classList.contains("open")) {
         closeMenu();
       } else {
@@ -111,6 +159,7 @@ const App = {
     this.activateNavbar();
     this.activateTimer();
     this.activateSlider();
+    this.activateTiles();
   }
 }
 
