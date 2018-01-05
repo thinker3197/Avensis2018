@@ -725,13 +725,13 @@ img[data-src] {
 }
 
 
-/* .team__content--tile > img:hover {
+ /*.team__content--tile > img:hover {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
   transition-duration: 1s;
-} */
+}*/
 
 
 /* ==========================================================================
@@ -776,7 +776,7 @@ img[data-src] {
     margin: 6% auto;
     padding: 5% 10%;
     border-radius: 100px;
-    background-color: #00eee3;
+    background-color: #000067;
     transition: all 0.25s;
 }
 
@@ -818,6 +818,11 @@ img[data-src] {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.footer ul>li>a:link, .footer ul>li>a:visited, .footer ul>li>a:hover, .footer ul>li>a:active {
+  text-decoration: none;
+  color: white;
 }
 
 /* .footer ul>li {
@@ -1284,7 +1289,7 @@ img[data-src] {
     Footer
    ========================================================================== */
     .footer ul {
-        width: 13%;
+        width: 10%;
     }
 }
 
