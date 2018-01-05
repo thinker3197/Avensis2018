@@ -512,26 +512,53 @@ img[data-src] {
 
 .app-event__tile .event__tile {
     height: 50%;
-    background: #ffffff;
+    /*background: #ffffff;*/
     width: 50%;
     float: left;
     padding: 10% 5%;
 }
 
-.app-event__tile .event__tile:nth-of-type(1) {
+.event__tile--technical {
+    background: url(../img/events/technical.jpg) center center no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.event__tile--robotics {
+    background: url(../img/events/robotics.jpg) center center no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.event__tile--literary {
+    background: url(../img/events/literature.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.event__tile--fnc {
+    background: url(../img/events/fnc.jpg) center center no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+/*.app-event__tile .event__tile:nth-of-type(1) {
     background: #d4d4d4;
 }
 
 .app-event__tile .event__tile:nth-of-type(4) {
     background: #d4d4d4;
-}
+}*/
 
 .app-event__tile .event__tile>h2 {
     margin-bottom: 15px;
 }
 
 .app-event__tile .event__tile>p {
-    color: #999999;
+    color: white;
+}
+
+.event__tile--literary>p {
+    color: black !important;
 }
 
 
