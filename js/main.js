@@ -68,6 +68,19 @@ const App = {
     });
   },
   activateSlider() {
+    const $slider = document.getElementById('js-slider'),
+      $msgContent = document.getElementById('js-msg-content');
+
+    $slider.addEventListener('click', (e) => {
+      const index = e.target.dataset.index;
+
+      if (e.target.nodeName === 'LI') {
+        this.slide(index);
+      }
+    });
+  },
+  slide(index) {
+    console.log("Hello");
     const content = [{
       auth: 'Prof. KP Chaudhary',
       msg: 'Its a matter of great privilege and pleasure for me to announce the commencement of avensis 2018. With consistent hard work and perseverance of our students, they have embarked on this continuous journey with a passionate attitude to place our institute as a hallmark of technical and scientific excellence.'
@@ -75,29 +88,22 @@ const App = {
       auth: 'Dr. Rinky Dwivedi',
       msg: 'Avensis 2018 is back with a flavour innovative skill sets of our students who would showcase their strengths and competences which would raise the aspirations of every young mind. I take pride in elaborating the fact that our fellow students have put in lots of sincere efforts to ake this Avensis a grand success.'
     }];
-
     const $msgText = document.getElementById('js-message-txt'),
       $msgAuth = document.getElementById('js-message-auth'),
       $slider = document.getElementById('js-slider'),
       $msgContent = document.getElementById('js-msg-content');
 
-    $slider.addEventListener('click', (e) => {
-      const index = +e.target.dataset.index;
+      $msgContent.style.opacity = 0;
 
-      if (e.target.nodeName === 'LI') {
-        $msgContent.style.opacity = 0;
+    setTimeout(() => {
+      $msgText.innerHTML = content[index].msg;
+      $msgAuth.innerHTML = '- ' + content[index].auth;
 
-        setTimeout(() => {
-          $msgText.innerHTML = content[index].msg;
-          $msgAuth.innerHTML = '- ' + content[index].auth;
+      $slider.children[index].classList.add('active');
+      $slider.children[index !== 0 ? 0 : 1].classList.remove('active');
 
-          $slider.children[index].classList.add('active');
-          $slider.children[index !== 0 ? 0 : 1].classList.remove('active');
-
-          $msgContent.style.opacity = 1;
-        }, 300);
-      }
-    });
+      $msgContent.style.opacity = 1;
+    }, 300);
   },
   activateTimer(date) {
     const endDate = new Date("Jan 10, 2018 00:00:00").getTime(),
@@ -194,4 +200,9 @@ const App = {
 
 window.onload = () => {
   App.init();
+  let a = 0;
+  setInterval(function() {
+    a = (a+1)%2;
+    App.slide(a);
+  }, 8000);
 }
