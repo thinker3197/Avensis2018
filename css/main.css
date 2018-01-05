@@ -372,7 +372,7 @@ img[data-src] {
     align-items: center;
     background-color: #faff00;
     display: flex;
-    height: 30%;
+    height: 20%;
     justify-content: center;
 }
 
@@ -389,7 +389,7 @@ img[data-src] {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 70%;
+    height: 80%;
     padding: 0 10%;
 }
 
@@ -406,7 +406,7 @@ img[data-src] {
 
 .app-message {
     background-color: #9bffc6;
-    height: 60vh;
+    height: 80vh;
 }
 
 .app-message__content {
@@ -1031,7 +1031,10 @@ img[data-src] {
     /* ==========================================================================
     Message section
    ========================================================================== */
-    .app-message__content {
+   .app-message {
+       height: 60vh;
+   }
+   .app-message__content {
         padding: 5vw 5%;
     }
     .app-message__content .message__content--msg {
