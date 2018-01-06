@@ -146,7 +146,7 @@ const App = {
   activateNavbar() {
     const $navMenu = document.getElementById("js-nav-menu"),
       $navList = document.getElementById("js-nav-list"),
-      $navWrapper = document.getElementById("js-nav-wrapper");
+      $navWrapper = document.getElementById("js-nav-wrapper"),
       $register = document.getElementById("js-register");
 
     const closeMenu = () => {
